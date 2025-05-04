@@ -11,7 +11,7 @@ struct Element {
 } ;
 void inArr(Element* mass, int size, int* rS) {
     for (int i = 0; i < size; ++i) {
-        printf("Ââåäèòå ýëåìåíò %d: ", i);
+        printf("Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² %d: ", i);
         char in[5]; 
         fgets(in, sizeof(in), stdin);
         getchar(); 
@@ -33,7 +33,7 @@ void inArr(Element* mass, int size, int* rS) {
 }
 void printArray(Element* mass, int size) {
     for (int i = 0; i < size; ++i) {
-        printf("Ýëåìåíò %d: %c%c%c%c\n", i, mass[i].let, mass[i].num1, mass[i].num2, mass[i].num3);
+        printf("ÃÃ«Ã¥Ã¬Ã¥Ã­Ã² %d: %c%c%c%c\n", i, mass[i].let, mass[i].num1, mass[i].num2, mass[i].num3);
     }
 }
 void rnotun(Element* mass, int* size) {
@@ -123,48 +123,48 @@ int main() {
     int size1, size2;
     Element mass1[MAX_SIZE], mass2[MAX_SIZE], mass_uniq[MAX_SIZE], mass_inter[MAX_SIZE], mass_diff2[MAX_SIZE], mass_diff1[MAX_SIZE], mass_sd[MAX_SIZE];
     int rS1 = 0, rS2 = 0, rS = 0, iS= 0, dS1 = 0, dS2 = 0, sdS = 0;
-    printf("Ââåäèòå ðàçìåð 1 ìíîæåñòâà: ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ 1 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: ");
     scanf_s("%d", &size1);
     getchar();
     inArr(mass1, size1, &rS1);
     printf("\n");
-    printf("Ââåäèòå ðàçìåð 2 ìíîæåñòâà: ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ 2 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: ");
     scanf_s("%d", &size2);
     getchar();
     inArr(mass2, size2, &rS2);
     printf("\n");
-    printf("Ïðîâåðêà íà óíèêàëüíîñòü 1 ìíîæåñòâà: \n");
+    printf("ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° ÑƒÐ½Ð¸ÐºÐ°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ 1 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°:  \n");
     printArray(mass1, rS1);
     printf("\n");
     rnotun(mass1, &rS1);
-    printf("Ïðîâåðêà íà óíèêàëüíîñòü 2 ìíîæåñòâà \n");
+    printf("ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° ÑƒÐ½Ð¸ÐºÐ°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ 2 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: \n");
     printArray(mass2, rS2);
     printf("\n");
     rnotun(mass2, &rS2);
-    printf("Ýëåìåíòû 1 ìíîæåñòâà: \n");
+    printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ 1 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: \n");
     printArray(mass1, rS1);
     printf("\n");
-    printf("Ýëåìåíòû 2 ìíîæåñòâà: \n");
+    printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ 2 Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: \n");
     printArray(mass2, rS2);
     printf("\n");
     unArr(mass_uniq, &rS, mass1, rS1, mass2, rS2);
-    printf("Ýëåìåíòû ïðè îáúåäèíåíèè: \n");
+    printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ñ€Ð¸ Ð¾Ð±ÑŠÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ð¸: \n");
     printArray(mass_uniq, rS);
     printf("\n");
     interArr(mass_inter, &iS, mass1, rS1, mass2, rS2);
-    printf("Ýëåìåíòû ïðè ïåðåñå÷åíèè: \n");
+    printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ñ€Ð¸ Ð¿ÐµÑ€ÐµÑÐµÑ‡ÐµÐ½Ð¸Ð¸: \n");
     printArray(mass_inter, iS);
     printf("\n");
     diffArr(mass_diff1, &dS1, mass1, rS1, mass2, rS2);
-    printf("Ýëåìåíòû A \ B: \n");
+    printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ A \ B:  \n");
     printArray(mass_diff1, dS1);
     printf("\n");
     diffArr(mass_diff2, &dS2, mass2, rS2, mass1, rS1);
-    printf("Ýëåìåíòû B \ A: \n");
+    printf("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ B \ A: \n");
     printArray(mass_diff2, dS2);
     printf("\n");
     symArr(mass_sd, &sdS, mass1, rS1, mass2, rS2);
-    printf("Ñèììåòðè÷åñêàÿ ðàçíîñòü A è B: \n");
+    printf("Ð¡Ð¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡ÐµÑÐºÐ°Ñ Ñ€Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ A Ð¸ B:  \n");
     printArray(mass_sd, sdS);
     printf("\n");
 }
