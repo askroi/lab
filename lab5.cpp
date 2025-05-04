@@ -13,13 +13,13 @@ void f(int** r, int n) {
 int main() {
     setlocale(LC_ALL, "rus");
     int n;
-    printf("Введите количество вершин: ");
+    printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅ: ");
     scanf_s("%d", &n);
     int** a = (int**)malloc(n * sizeof(int*));
     for (int i = 0; i < n; i++) {
         a[i] = (int*)malloc(n * sizeof(int));
     }
-    printf("Введите матрицу смежности:\n");
+    printf("Р’РІРµРґРёС‚Рµ РјР°С‚СЂРёС†Сѓ СЃРјРµР¶РЅРѕСЃС‚Рё:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             scanf_s("%d", &a[i][j]);
@@ -33,7 +33,7 @@ int main() {
         }
     }
     f(r, n);
-    printf("Матрица достижимости:\n");
+    printf("РњР°С‚СЂРёС†Р° РґРѕСЃС‚РёР¶РёРјРѕСЃС‚Рё:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             printf("%d ", r[i][j]);
