@@ -6,11 +6,11 @@ void in(int p[MAX_SIZE][2], int i, int n) {
     while (1) {
         if (scanf_s("%d %d", &p[i][0], &p[i][1]) != 2) {
             while (getchar() != '\n');
-            printf("Ошибка: введите два целых числа через пробел.\n");
+            printf("РћС€РёР±РєР°: РІРІРµРґРёС‚Рµ РґРІР° С†РµР»С‹С… С‡РёСЃР»Р° С‡РµСЂРµР· РїСЂРѕР±РµР».\n");
             continue;
         }
         if (p[i][0] < 1 || p[i][0] > n || p[i][1] < 1 || p[i][1] > n) {
-            printf("Ошибка: числа должны быть от 1 до %d.\n", n);
+            printf("РћС€РёР±РєР°: С‡РёСЃР»Р° РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РѕС‚ 1 РґРѕ %d.\n", n);
             continue;
         }
         break;
@@ -75,20 +75,20 @@ int main() {
     setlocale(LC_ALL, "rus");
     int n, m;
     int p[MAX_SIZE][2];
-    printf("Введите количество элементов множества: ");
-    scanf_s("%d", &n);
-    printf("Введите количество пар: ");
-    scanf_s("%d", &m);
-    printf("Введите пары:\n");
-    for (int i = 0; i < m; i++) {
-        in(p, i, n);
-    }
-    bool refl = ref(n, m, p);
-    bool symm = sym(m, p);
-    bool antisy = antisym(m, p);
-    bool transi = tran(m, p);
-    printf("Рефлексивность: %d\n", refl);
-    printf("Симметричность: %d\n", symm);
-    printf("Кососимметричность: %d\n", antisy);
-    printf("Транзитивность: %d\n", transi);
+ printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјРЅРѕР¶РµСЃС‚РІР°: ");
+ scanf_s("%d", &n);
+ printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЂ: ");
+ scanf_s("%d", &m);
+ printf("Р’РІРµРґРёС‚Рµ РїР°СЂС‹:\n");
+ for (int i = 0; i < m; i++) {
+     in(p, i, n);
+ }
+ bool refl = ref(n, m, p);
+ bool symm = sym(m, p);
+ bool antisy = antisym(m, p);
+ bool transi = tran(m, p);
+ printf("Р РµС„Р»РµРєСЃРёРІРЅРѕСЃС‚СЊ: %d\n", refl);
+ printf("РЎРёРјРјРµС‚СЂРёС‡РЅРѕСЃС‚СЊ: %d\n", symm);
+ printf("РљРѕСЃРѕСЃРёРјРјРµС‚СЂРёС‡РЅРѕСЃС‚СЊ: %d\n", antisy);
+ printf("РўСЂР°РЅР·РёС‚РёРІРЅРѕСЃС‚СЊ: %d\n", transi);
 }
