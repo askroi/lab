@@ -26,14 +26,14 @@ void inArr(Element* mass, int size, int* rS) {
             mass[*rS].num3 = in[3];
             (*rS)++;
         } else {
-            printf("Error input\n");
+            printf("Ошибка ввоба\n");
             i--;
         }
     }
 }
 void printArray(Element* mass, int size) {
     for (int i = 0; i < size; ++i) {
-        printf("Ýëåìåíò %d: %c%c%c%c\n", i, mass[i].let, mass[i].num1, mass[i].num2, mass[i].num3);
+        printf("Элемент %d: %c%c%c%c\n", i, mass[i].let, mass[i].num1, mass[i].num2, mass[i].num3);
     }
 }
 void rnotun(Element* mass, int* size) {
