@@ -11,7 +11,7 @@ struct Element {
 } ;
 void inArr(Element* mass, int size, int* rS) {
     for (int i = 0; i < size; ++i) {
-        printf("Ââåäèòå ýëåìåíò %d: ", i);
+        printf("Введите элемент %d: ", i);
         char in[5]; 
         fgets(in, sizeof(in), stdin);
         getchar(); 
